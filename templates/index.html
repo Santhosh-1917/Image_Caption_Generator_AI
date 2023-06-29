@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Caption Generator</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 500px;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Caption Generator</h1>
+        <form action="/generate_caption" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <br>
+            <br>
+            <input type="submit" value="Generate Caption">
+        </form>
+        {% if your_result %}
+        <img src ="{{your_result['image']}}>
+        <h1> CAPTION :<i> {{ your_result['caption']}} </i> </h1>
+        <% endif %}
+    </div>
+    
+</body>
+</html>
