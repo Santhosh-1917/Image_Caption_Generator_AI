@@ -66,8 +66,7 @@ def index():
     return render_template('index.html')
 
 def decode_prediction(result):
-    # Perform decoding logic based on your model's output format
-    # Here's a simple example assuming the model returns class probabilities
+   \
     class_labels = ['Class 1', 'Class 2', 'Class 3']
     predicted_class_index = np.argmax(result)
     class_label = class_labels[predicted_class_index]
